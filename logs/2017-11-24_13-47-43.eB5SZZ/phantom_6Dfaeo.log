@@ -1,0 +1,7 @@
+2017-11-24 13:47:44.452 +0000 [info] [] Start
+2017-11-24 13:47:45.544 +0000 [error] [benchmark_io 594] format error
+2017-11-24 13:48:44.622 +0000 [error] [monitor_io] bq_sleep: Operation canceled
+2017-11-24 13:48:44.623 +0000 [error] [phantom_logger] bq_sleep: Operation canceled
+2017-11-24 13:48:44.623 +0000 [error] [benchmark_io stream_method brief_logger] bq_sleep: Operation canceled
+2017-11-24 13:48:44.623 +0000 [error] [monitor_io] bq_sleep: Operation canceled
+2017-11-24 13:48:44.623 +0000 [info] [] Exit

@@ -1,0 +1,9 @@
+[Host: example.org]
+[Connection: close]
+[User-Agent: Tank]
+5 /route/?rll=50.262025%2C53.276083~50.056015%2C53.495561&origin=1&simplify=1
+class
+10 /route/?rll=50.262025%2C53.276083~50.056015%2C53.495561&origin=1&simplify=1
+hello!clas
+7 /route/?rll=37.565147%2C55.695758~37.412796%2C55.691454&origin=1&simplify=1
+uripost

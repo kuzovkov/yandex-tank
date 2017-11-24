@@ -1,0 +1,98 @@
+
+phantom:
+  address: app.xtramile.tech # [Target's address]:[target's port]
+  load_profile:
+    load_type: rps # schedule load by defining requests per second
+    schedule: line(1, 10, 10m) # starting from 1rps growing linearly to 10rps during 10 minutes
+    #schedule: const (load,dur)
+    #schedule: line(1, 10, 10m) const(10,10m)
+telegraf:
+  enabled: false # let's disable telegraf monitoring for this time
+
+
+#Access mode
+phantom:
+  address: 203.0.113.1:80
+  load_profile:
+    load_type: rps
+    schedule: line(1, 10, 10m)
+  header_http: '1.1'
+  headers: |
+      [Host: www.target.example.com]
+      [Connection: close]
+  ammofile: /tmp/access.log
+  ammo_type: access
+telegraf:
+  enabled: false # let's disable telegraf monitoring for this time
+
+#URI-style, URIs in load.yaml
+phantom:
+  address: 203.0.113.1:80
+  load_profile:
+    load_type: rps
+    schedule: line(1, 10, 10m)
+  header_http: '1.1'
+  ssl: true
+  headers: |
+    [Host: www.target.example.com]
+    [Connection: close]
+  uris: |
+    /
+    /buy
+    /sdfg?sdf=rwerf
+    /sdfbv/swdfvs/ssfsf
+telegraf:
+  enabled: false # let's disable telegraf monitoring for this time
+
+
+#URI-style, URIs in file
+phantom:
+  address: 203.0.113.1:80
+    load_profile:
+    load_type: rps
+  schedule: line(1, 10, 10m)
+  header_http: '1.1'
+  ammo_type: uri
+  ammofile: ammo1.txt.sample
+  ssl: true
+telegraf:
+  enabled: false # let's disable telegraf monitoring for this time
+
+
+#URI+POST-style
+phantom:
+  address: 203.0.113.1:80
+    load_profile:
+    load_type: rps
+  schedule: line(1, 10, 10m)
+  header_http: '1.1'
+  ammo_type: uripost
+  ammofile: ammo2.txt.sample
+  ssl: true
+telegraf:
+  enabled: false # let's disable telegraf monitoring for this time
+
+#Request-style
+#URI+POST-style
+phantom:
+  address: 203.0.113.1:80
+    load_profile:
+    load_type: rps
+  schedule: line(1, 10, 10m)
+  header_http: '1.1'
+  ammo_type: phantom
+  ammofile: ammo3.txt.sample
+  ssl: true
+autostop:
+  autostop: |
+    time(1s,10s)
+    http(5xx,100%,1s)
+    net(xx,1,30)
+    autostop: time(1500,15)
+telegraf:
+  enabled: false # let's disable telegraf monitoring for this time
+
+
+
+
+

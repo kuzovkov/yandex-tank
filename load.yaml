@@ -1,0 +1,17 @@
+#URI-style, URIs in file
+phantom:
+  address: pixel.xtramile.io:443
+  load_profile:
+    load_type: rps
+    schedule: const (0.5, 1m)
+  writelog: 'true'
+  header_http: '1.1'
+  ammo_type: uri
+  ammofile: ammo-pixel.txt
+  ssl: true
+
+telegraf:
+  enabled: false # let's disable telegraf monitoring for this time
+
+
+

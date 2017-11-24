@@ -1,0 +1,23 @@
+aggregator: {enabled: true, package: yandextank.plugins.Aggregator}
+android: {enabled: false, package: yandextank.plugins.Android}
+autostop: {enabled: true, package: yandextank.plugins.Autostop}
+bfg: {enabled: false, package: yandextank.plugins.Bfg}
+console: {enabled: true, package: yandextank.plugins.Console}
+core: {}
+jmeter: {enabled: false, package: JMeter}
+json_report: {enabled: true, package: yandextank.plugins.JsonReport}
+overload: {enabled: false, package: yandextank.plugins.DataUploader}
+phantom:
+  address: demo-company.jobs.xtramile.tech/test-alex-job:443
+  ammo_type: uri
+  ammofile: ammo1.txt
+  enabled: true
+  header_http: '1.1'
+  load_profile: {load_type: rps, schedule: 'const (10, 1m)'}
+  package: yandextank.plugins.Phantom
+  ssl: true
+rcassert: {enabled: true, package: yandextank.plugins.RCAssert}
+rcheck: {enabled: true, package: yandextank.plugins.ResourceCheck}
+shellexec: {enabled: true, package: yandextank.plugins.ShellExec}
+telegraf: {enabled: false, package: yandextank.plugins.Telegraf}
+tips: {enabled: true, package: yandextank.plugins.TipsAndTricks}

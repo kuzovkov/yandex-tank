@@ -1,3 +1,2 @@
 phantom:
-  address: [required field]
-  load_profile: [required field]
+  writelog: [must be of string type]

@@ -1,0 +1,8 @@
+[Connection: close]
+[Host: target.example.com]
+[Cookie: None]
+/?drg tag1
+/
+/buy tag2
+[Cookie: test]
+/buy/?rt=0&station_to=7&station_from=9
